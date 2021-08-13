@@ -6,11 +6,11 @@ class Cliente{
 
 class ContaCorrente {
     agencia;
-    saldo;
+    _saldo; // anderline sinalizando que o atributo não pode ser alterado
 
     sacar(valor){
-    if(this.saldo >= valor){
-       this.saldo -= valor;
+    if(this._saldo >= valor){
+       this._saldo -= valor;
        }
     }
 
