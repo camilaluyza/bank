@@ -1,0 +1,12 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "Projeto bank para clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Camila Luiza",
+  "license": "ISC",
+  "type": "module"
+}
