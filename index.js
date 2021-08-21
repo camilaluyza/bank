@@ -1,27 +1,5 @@
-class Cliente{
-    nome;
-    cpf;
-    rg;
-}
-
-class ContaCorrente {
-    agencia;
-    _saldo; // anderline sinalizando que o atributo não pode ser alterado
-
-    sacar(valor){
-    if(this._saldo >= valor){
-       this._saldo -= valor;
-       }
-    }
-
-    depositar(valor){
-        if(valor >0 ){
-            this.saldo += valor;
-        }
-    }
-}
-
-
+import { Cliente } from "./cliente.js";
+import {ContaCorrente} from "ContaCorrente.js";
     const cliente1 = new Cliente();
     cliente1.nome = "Camila";
     cliente1.cpf = 12581757545;
@@ -33,10 +11,13 @@ class ContaCorrente {
     cliente2.rg = 213494566;
 
 const contaCorrenteCamila = new ContaCorrente();
-contaCorrenteCamila.saldo = 0;
 contaCorrenteCamila.agencia = 0001;
 
 contaCorrenteCamila.depositar(100);
 contaCorrenteCamila.sacar(50);
 
-console.log(contaCorrenteCamila.saldo);
+const valorSacado = contaCorrenteCamila.sacar(50);
+
+console.log(valorSacado);
+console.log(contaCorrenteCamila._saldo);
+
